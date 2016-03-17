@@ -119,6 +119,7 @@ d3.select("span#viz")
   .append("span")
   .style("font-size", function(d) { return b(d[1]) + "px"; })
   .style("color", function(d){ return colors(d[1]); })
+  .style("font-family", "monospace")
   .text( function(d, i) { return d[0]; })
   .append("span")
   .text(" ");
