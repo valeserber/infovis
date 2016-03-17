@@ -108,7 +108,9 @@ a.sort(function(a, b){
 var b = d3.scale
   .linear()
   .domain([2,34])
-  .range([15,45]);
+  .range([15,80]);
+
+var colors = d3.scale.category10();
 
 d3.select("span#viz")
   .select("span")
@@ -116,6 +118,7 @@ d3.select("span#viz")
   .enter()
   .append("span")
   .style("font-size", function(d) { return b(d[1]) + "px"; })
+  .style("color", function(d){ return colors(d[1]); })
   .text( function(d, i) { return d[0]; })
   .append("span")
   .text(" ");
