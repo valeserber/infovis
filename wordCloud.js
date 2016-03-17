@@ -100,17 +100,24 @@ var a = [
 ["user", 3] 
 ];
 
+
+a.sort(function(a, b){
+    return b[1]-a[1];
+});
+
 var b = d3.scale
   .linear()
   .domain([2,34])
   .range([15,45]);
 
-d3.select("div#viz")
-  .select("p")
+d3.select("span#viz")
+  .select("span")
   .data(a)
   .enter()
-  .append("p")
+  .append("span")
   .style("font-size", function(d) { return b(d[1]) + "px"; })
-  .text( function(d, i) { return d[0]; });
+  .text( function(d, i) { return d[0]; })
+  .append("span")
+  .text(" ");
 
 
