@@ -22,6 +22,30 @@
     var layer;
     var rect;
 
+    // Correr, Caminar, Abdominales, Piernas, Eliptico
+    //Enero
+    //Febrero
+    //Marzo
+    //Abril
+    var dataset_time = [
+      [312, 824, 113, 231, 40],
+      [92, 901, 104, 345, 153],
+      [80, 1520, 58, 49, 0],
+      [64, 1347, 30, 30, 21]
+    ];
+
+    // Correr, Caminar, Eliptico
+    var dataset_km = [
+      ['Enero', 29.8, 42.4, 3.2],
+      ['Febrero', 10.9, 47.3, 9.4],
+      ['Marzo', 9.9, 88.3, 0],
+      ['Abril', 9.51, 119.08, 1.76]
+    ];
+
+    //Enero,Feb,Marzo,Abril
+    var total_time = [1520, 1595, 1707, 1492];
+    var total_km = [75.4, 67.61, 98.2, 130.35];
+
 
 $(document).ready(function() {
   init_csv();
@@ -181,6 +205,7 @@ function bumpLayer(n, o) {
     var x = 1 / (.1 + Math.random()),
         y = 2 * Math.random() - .5,
         z = 10 / (.1 + Math.random());
+    //de 0 a cantidad de meses
     for (var i = 0; i < n; i++) {
       var w = (i / n - y) * z;
       a[i] += x * Math.exp(-w * w);
@@ -188,9 +213,11 @@ function bumpLayer(n, o) {
   }
 
   var a = [], i;
+  //de 0 a 4, cantidad de meses
   for (i = 0; i < n; ++i) {
     a[i] = o + o * Math.random();
   }
+  // de 0 a cantidad de actividades
   for (i = 0; i < 5; ++i) {
     bump(a);
   } 

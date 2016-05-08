@@ -1,21 +1,75 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    
-    
-</head>
-<body>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.js"></script>
-    <h1> InfoVis</h1>
-    
-    <a href="tp1.html"> World Cloud </a>
-    <br>
-    <a href="tp2.html"> Questions </a>
-    <br>
-    <a href="datosPersonales/index.html"> Personal Data </a>
-    <br>
-    <a href="datosPersonales/total.html"> Personal Data Part 2 </a>
+<html lang="en">
+	<head>
+	<title>InfoVis</title>
+	<meta charset="utf-8">
+	<meta name = "format-detection" content = "telephone=no" />
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/touchTouch.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/touchTouch.jquery.js"></script>
+	<script src="js/jquery-migrate-1.2.1.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/packery.pkgd.min.js"></script>
+	<!--[if (gt IE 9)|!(IE)]><!-->
+	<script src="js/jquery.mobile.customized.min.js"></script>
+	<script src="js/wow.js"></script>
+	<script>
+		$(document).ready(function () {
+			if ($('html').hasClass('desktop')) {
+				new WOW().init();
+			}
+		});
+	</script>
+	
+	</head>
+<body class="index-1">
+<!--==============================header=================================-->
+<header id="header">
+	<div id="stuck_container">
+		<div class="container">
+			<div class="row">
+				<div class="grid_12">
+					<h1><a href="index.html">InfoVis</a></h1>
+					<br>
+					<h2>ValeriaSerber</h2>
+					<nav>
+						<ul class="sf-menu">
+							<li><a href="index.html">Index</a>
+								
+										<ul>
+											<li><a href="tp1">World Cloud</a></li>
+											<li><a href="tp2">Questions</a></li>
+											<li><a href="datosPersonales/index.html">Personal Data</a></li>
+											<li><a href="datosPersonales/total.html">Personal Data Part 2</a></li>
+										</ul>
+									
+							</li>
+							
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!--=======content================================-->
+
+
+<!--=======footer=================================-->
+<footer id="footer">
+	
+</footer>
+<script>
+	$(function(){
+		$('#touch_gallery a').touchTouch();
+	});
+</script>
+
 </body>
 </html>
