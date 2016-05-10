@@ -75,7 +75,7 @@
       this.nodes = [];
       this.force = null;
       this.circles = null;
-      this.fill_color = d3.scale.ordinal().domain(["Correr", "Eliptico", "Caminar", "Abdominales", "Piernas"]).range(["#ff8c66", "#b3ff66", "#66d9ff", "#b366ff", "#ff66ff"]);
+      this.fill_color = d3.scale.ordinal().domain(["Correr", "Eliptico", "Caminar", "Abdominales", "Piernas"]).range(["#b3cde3", "#ccebc5", "#decbe4", "#fed9a6", "#fbb4ae"]);
       max_amount = 160;
 
       this.radius_scale = d3.scale.sqrt().domain([2, 160]).range([0, 210]); 

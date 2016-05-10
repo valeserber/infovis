@@ -6,7 +6,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
+  <br>
+  <br>
   <title>Resumen de Actividad 2016</title>
   <meta name="description" content="">
   <meta name="author" content="">
@@ -22,14 +23,11 @@
   <style>
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin: auto;
-    position: relative;
-    width: 960px;
+    font: 10px sans-serif;
   }
 
-  text {
-    font: 10px sans-serif;
+  h1,h2,h3 {
+    text-align: center;
   }
 
   .axis path,
@@ -39,10 +37,12 @@
     shape-rendering: crispEdges;
   }
 
-  form {
-    position: absolute;
-    right: 10px;
-    top: 10px;
+  .bar {
+    fill: steelblue;
+  }
+
+  .x.axis path {
+    display: none;
   }
 
   </style>
@@ -55,10 +55,38 @@
     <header>
     <h1>Resumen de Actividad 2016</h1>
     </header>
-    <form>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+          <h3>Duración total de actividad de cada mes</h3>
+          <div id="area1"></div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+          <h3>Distancias totales recorridas en cada mes </h3>
+          <div id="area2"></div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+          <h3>Calorías totales consumidas cada mes</h3>
+          <div id="area3"></div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+          <h3>Cantidad de calorías consumidas en cada actividad</h3>
+          <div id="area4"></div>
+      </div>
+        
+    </div>
+      
+    <!-- <form>
       <label><input type="radio" id="grouped" name="mode" value="grouped" onchange="change()"> Grouped</label>
       <label><input type="radio" id="stacked" name="mode" value="stacked" checked onchange="change()"> Stacked</label>
-    </form>
+    </form> -->
     <!-- <div id="main" role="main">
       <div id="view_selection" class="btn-group">
         <a href="#" id="time" class="btn active">Duración</a>
@@ -80,7 +108,12 @@
   <script defer src="js/script.js"></script>
   <script src="js/CustomTooltip.js"></script>
   <script src="js/libs/d3.js"></script>
-  <script src="js/stackbar.js"></script>
+  <script src="js/total_time.js"></script>
+  <script src="js/total_distance.js"></script>
+  <script src="js/total_calories.js"></script>
+  <script src="js/cal_by_activity.js"></script>
+
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
  <!-- <script type="text/javascript"> 
   //   $(document).ready(function() {
   //       $(document).ready(function() {

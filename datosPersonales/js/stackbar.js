@@ -14,6 +14,12 @@
     var walk_km_total = [];
     var elip_km_total = [];
 
+    var run_cal_total = [];
+    var walk_cal_total = [];
+    var elip_cal_total = [];
+    var abs_cal_total = [];
+    var leg_cal_total = [];
+
     var n, m, stack, layers, yGroupMax, yStackMax;
     var margin, width, height;
     var x, y, color;
@@ -123,6 +129,11 @@ function init_csv() {
         run_km_total[i]=0;
         walk_km_total[i]=0;
         elip_km_total[i]=0;
+        run_cal_total[i]=0;
+        walk_cal_total[i]=0;
+        elip_cal_total[i]=0;
+        abs_cal_total[i]=0;
+        leg_cal_total[i]=0;
       }
       data.forEach(function(d) {
         time_total[(d.month_number)-1] = time_total[(d.month_number)-1] + +d.duration;
@@ -130,16 +141,21 @@ function init_csv() {
         if (d.group === "Correr") {
           run_time_total[(d.month_number)-1] = run_time_total[(d.month_number)-1] + +d.duration;
           run_km_total[(d.month_number)-1] = run_km_total[(d.month_number)-1] + +d.km;
+          run_cal_total[(d.month_number)-1] = run_cal_total[(d.month_number)-1] + +d.calories;
         } else if (d.group === "Caminar") {
           walk_time_total[(d.month_number)-1] = walk_time_total[(d.month_number)-1] + +d.duration;
           walk_km_total[(d.month_number)-1] = walk_km_total[(d.month_number)-1] + +d.km;
+          walk_cal_total[(d.month_number)-1] = walk_cal_total[(d.month_number)-1] + +d.calories;
         } else if (d.group === "Eliptico") {
           elip_time_total[(d.month_number)-1] = elip_time_total[(d.month_number)-1] + +d.duration;
           elip_km_total[(d.month_number)-1] = elip_km_total[(d.month_number)-1] + +d.km;
+          elip_cal_total[(d.month_number)-1] = elip_cal_total[(d.month_number)-1] + +d.calories;
         } else if (d.group === "Piernas") {
           leg_time_total[(d.month_number)-1] = leg_time_total[(d.month_number)-1] + +d.duration;
+          leg_cal_total[(d.month_number)-1] = leg_cal_total[(d.month_number)-1] + +d.calories;
         } else if (d.group === "Abdominales") {
           ab_time_total[(d.month_number)-1] = ab_time_total[(d.month_number)-1] + +d.duration;
+          abs_cal_total[(d.month_number)-1] = abs_cal_total[(d.month_number)-1] + +d.calories;
         }
       });
     });
