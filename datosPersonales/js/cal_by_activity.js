@@ -27,7 +27,7 @@ var svg4 = d3.select("#area4").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("/data/cal_by_activity.csv", function(error, data) {
+d3.csv("data/cal_by_activity.csv", function(error, data) {
   if (error) throw error;
 
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "Activity"; }));

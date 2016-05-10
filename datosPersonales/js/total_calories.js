@@ -27,7 +27,7 @@ var svg3 = d3.select("#area3").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("/data/total_cal.csv", function(error, data) {
+d3.csv("data/total_cal.csv", function(error, data) {
   if (error) throw error;
 
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "Month"; }));
